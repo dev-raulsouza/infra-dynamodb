@@ -29,13 +29,8 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   billing_mode   = "PROVISIONED"
   read_capacity  = 20
   write_capacity = 20
-  hash_key       = "ID_FUNDO"
-  range_key      = "NOME_FUNDO"
-
-  attribute {
-    name = "ID_FUNDO"
-    type = "S"
-  }
+  hash_key       = "NOME_FUNDO"
+  range_key      = "HORARIO_FUNDO"
 
   attribute {
     name = "NOME_FUNDO"
@@ -44,11 +39,6 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
 
   attribute {
     name = "HORARIO_FUNDO"
-    type = "S"
-  }
-
-  attribute {
-    name = "HORARIO_CADASTRO"
     type = "S"
   }
 
